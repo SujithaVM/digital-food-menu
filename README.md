@@ -10,4 +10,4 @@ A clean digital menu for an Indian restaurant with a cool filtering feature.
 * HTML5 & CSS3 (Grid + Checkbox logic).
 
   ## 🌐 Live Demo
-Check out the live interactive menu here: [View Demo](your-link-here)
+Check out the live interactive menu here: [View Demo]( https://sujithavm.github.io/digital-food-menu/)
