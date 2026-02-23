@@ -1,5 +1,4 @@
-/* Core Styling */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +10,6 @@ body {
     background-color: #fcfcfc;
 }
 
-/* Navbar UX */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,7 +44,6 @@ body {
 
 .nav-links a:hover { color: #8e6d00; }
 
-/* Hero Section */
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
@@ -78,9 +75,8 @@ body {
     transition: 0.3s;
 }
 
-.explore-btn:hover { background: #6b5200; transform: scale(1.05); }
-
-/* Menu Logic */
+.explore-btn:hover { background: #6b5200; transform: scale(1.05);
+                    
 .menu-container {
     padding: 80px 8%;
 }
@@ -110,28 +106,22 @@ input[type="radio"] { display: none; }
     transition: 0.3s;
 }
 
-/* Active Button Color */
 #all:checked ~ .filter-nav label[for="all"],
 #starters-filter:checked ~ .filter-nav label[for="starters-filter"],
 #main-filter:checked ~ .filter-nav label[for="main-filter"],
 #dessert-filter:checked ~ .filter-nav label[for="dessert-filter"] {
     background: #8e6d00;
     color: white;
-}
 
-/* Grid Layout */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* Filter Effects */
 #starters-filter:checked ~ .menu-grid .food-card:not(.starter) { display: none; }
 #main-filter:checked ~ .menu-grid .food-card:not(.main) { display: none; }
 #dessert-filter:checked ~ .menu-grid .food-card:not(.dessert) { display: none; }
-
-/* Food Cards UX */
 .food-card {
     background: white;
     border-radius: 20px;
@@ -144,26 +134,25 @@ input[type="radio"] { display: none; }
 
 .food-card:hover { transform: translateY(-10px); }
 
-/* Image Fit Logic - FIXED HERE */
 .img-box {
-    height: 250px; /* Ella card-um ore height-la iruka idhu dhaan kaaranam */
     width: 100%;
-    position: relative;
-    overflow: hidden; /* Image velila varaama thadukkum */
+    height: 220px;       
+    overflow: hidden;    
+    border-radius: 15px 15px 0 0; 
 }
 
 .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Image distortion illama box-a fill pannum */
-    object-position: center;
     display: block;
-    transition: 0.5s ease;
+    object-fit: cover;  
+    object-position: center;
+    
+    transition: transform 0.5s ease; 
 }
-
-.food-card:hover .img-box img { transform: scale(1.1); }
-
-/* Veg/Non-Veg Tag */
+.food-card:hover .img-box img {
+    transform: scale(1.1);
+}
 .type-tag {
     position: absolute;
     top: 15px;
@@ -192,7 +181,6 @@ input[type="radio"] { display: none; }
 .non-veg { border-color: red; }
 .non-veg::after { background: red; }
 
-/* Content Details */
 .details { padding: 25px; text-align: center; }
 .details h3 { margin-bottom: 8px; color: #333; font-size: 1.3rem; }
 .details p { font-size: 0.9rem; color: #777; margin-bottom: 15px; height: 40px; }
@@ -205,7 +193,6 @@ input[type="radio"] { display: none; }
     color: #888;
 }
 
-/* Mobile Responsive */
 @media (max-width: 900px) {
     .menu-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -213,4 +200,5 @@ input[type="radio"] { display: none; }
 @media (max-width: 600px) {
     .menu-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2.5rem; }
+
 }
